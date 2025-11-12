@@ -1,0 +1,7 @@
+/* styles.css or component CSS */
+.content {
+  margin-top: 60px; /* same as topbar height */
+  padding: 20px;     /* optional spacing inside content */
+
+  overflow-y: auto; /* makes content scrollable */
+}

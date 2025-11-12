@@ -1,0 +1,74 @@
+<div class="content">
+  <div class="container">
+    <h2>User Management</h2>
+
+    <!-- Simple Form -->
+    <div class="card p-3 mb-4">
+      <div class="mb-3">
+        <label for="userName" class="form-label">Name:</label>
+        <input
+          type="text"
+          id="userName"
+          class="form-control"
+          [(ngModel)]="newUser.u_name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="userMobile" class="form-label">Mobile:</label>
+        <input
+          type="text"
+          id="userMobile"
+          class="form-control"
+          [(ngModel)]="newUser.u_Mobile"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="userAddress" class="form-label">Address:</label>
+        <input
+          type="text"
+          id="userAddress"
+          class="form-control"
+          [(ngModel)]="newUser.u_Address"
+        />
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-primary" (click)="editUserId ? updateUser() : addUser()">
+          {{ editUserId ? 'Update User' : 'Add User' }}
+        </button>
+        <button class="btn btn-secondary" (click)="cancelEdit()" *ngIf="editUserId">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Users Table -->
+    <div class="card p-3">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.u_id }}</td>
+            <td>{{ user.u_name }}</td>
+            <td>{{ user.u_Mobile }}</td>
+            <td>{{ user.u_Address }}</td>
+            <td>
+              <button class="btn btn-sm btn-warning me-2" (click)="editUser(user)">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="deleteUser(user.u_id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

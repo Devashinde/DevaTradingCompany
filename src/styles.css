@@ -1,1 +1,37 @@
+/* body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('src/assets/devatradinglogo.jpg'); 
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;  
+  background-attachment:local;  
+  font-family: Arial, sans-serif;
+  opacity: 90px;
+  padding-top: 20px;
+} */
 /* You can add global styles to this file, and also import other style files */
+/* 🌈 Main background */
+body {
+  background: linear-gradient(135deg, #f8faff 0%, #e8f0ff 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Scrollbar styling (optional for aesthetic touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00c6ff, #007bff);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #007bff, #00c6ff);
+}

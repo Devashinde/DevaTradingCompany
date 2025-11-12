@@ -1,0 +1,78 @@
+<div class="dashboard container-fluid mt-4">
+  <!-- Top Cards -->
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="card stat-card text-center bg-users text-white p-3">
+        <h5>Total Users</h5>
+        <h3>150</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card stat-card text-center bg-orders text-white p-3">
+        <h5>Total Orders</h5>
+        <h3>320</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card stat-card text-center bg-revenue text-white p-3">
+        <h5>Total Revenue</h5>
+        <h3>₹12,500</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card stat-card text-center bg-stocks text-white p-3">
+        <h5>Vegetable Stocks</h5>
+        <h3>450 Tons</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h5>Monthly Sales</h5>
+        <!-- <canvas baseChart
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [type]="'line'">
+        </canvas> -->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h5>Vegetable Distribution</h5>
+        <!-- <canvas baseChart
+                [data]="pieChartData"
+                [options]="pieChartOptions"
+                [type]="'pie'">
+        </canvas> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity / Table -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card p-3">
+        <h5>Recent Users</h5>
+        <table class="table table-striped mt-3">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.u_name }}</td>
+              <td>{{ user.u_Mobile }}</td>
+              <td>{{ user.u_Address }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

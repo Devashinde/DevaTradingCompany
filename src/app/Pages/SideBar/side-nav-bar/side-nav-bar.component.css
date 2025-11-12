@@ -1,0 +1,58 @@
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  padding-top: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  transition: width 0.3s;
+  background: linear-gradient(90deg, #60f8c0, #6ac7e1);
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Toggle button always visible */
+.toggle-btn {
+  position: fixed; /* fixed so it stays on screen */
+  top: 15px;
+  left: 220px; /* aligns with sidebar when expanded */
+  z-index: 1001;
+  transition: left 0.3s;
+}
+
+.sidebar.collapsed ~ .toggle-btn {
+  left: 60px; /* moves left when sidebar collapses */
+}
+
+/* Sidebar links */
+.menu-header {
+  font-weight: bold;
+  padding: 10px 15px;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-link i {
+  width: 20px; /* space for icons */
+}
+
+.menu-link:hover {
+  background-color: #949aa0;
+  color: white;
+}
+
+
+

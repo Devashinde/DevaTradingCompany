@@ -1,0 +1,66 @@
+<!-- Sidebar -->
+<div class="sidebar bg-light" [class.collapsed]="isCollapsed">
+    <!-- Toggle Button outside sidebar -->
+
+  <ul class="list-unstyled">
+    <li class="toggle-item">
+      <button class="btn btn-light w-100" (click)="toggleSidebar()">
+        <i class="fa" [ngClass]="isCollapsed ? 'fa-arrow-right' : 'fa-arrow-left'"></i>
+        <span *ngIf="!isCollapsed"></span>
+      </button></li>
+    <li class="menu-header">
+      <i class="fa fa-cogs"></i>
+      <span *ngIf="!isCollapsed">Admin Section</span>
+    </li>
+    <li>
+      <a [routerLink]="['/dashboard']" class="menu-link">
+        <i class="fa fa-tachometer-alt"></i>
+        <span *ngIf="!isCollapsed">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="menu-link">
+        <i class="fa fa-sliders-h"></i>
+        <span *ngIf="!isCollapsed">Settings</span>
+      </a>
+    </li>
+
+    <!-- User Section -->
+    <li class="menu-header mt-3">
+      <i class="fa fa-users"></i>
+      <span *ngIf="!isCollapsed">User Section</span>
+    </li>
+    <li>
+      <a href="#" class="menu-link">
+        <i class="fa fa-list"></i>
+        <span *ngIf="!isCollapsed">User List</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="menu-link">
+        <i class="fa fa-user-plus"></i>
+        <span *ngIf="!isCollapsed">Add User</span>
+      </a>
+    </li>
+
+    <!-- About Section -->
+    <li class="menu-header mt-3">
+      <i class="fa fa-info-circle"></i>
+      <span *ngIf="!isCollapsed">About Us</span>
+    </li>
+    <li>
+      <a  [routerLink]="['/about-company']" class="menu-link">
+        <i class="fa fa-building"></i>
+        <span *ngIf="!isCollapsed">About Company</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/about-company']" class="menu-link">
+        <i class="fa fa-envelope"></i>
+        <span *ngIf="!isCollapsed">Contact Us</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+

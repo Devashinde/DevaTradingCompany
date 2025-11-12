@@ -1,0 +1,20 @@
+.card h4 {
+  color: #007bff;
+  margin-top: 20px;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

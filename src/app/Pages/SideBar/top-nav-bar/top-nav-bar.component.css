@@ -1,0 +1,34 @@
+/* Navbar logo */
+.navbar-logo {
+  height: 79px;      /* or the height of your navbar */
+  width: 219px;       /* automatically adjusts width to maintain aspect ratio */
+
+}
+
+/* Optional: navbar height */
+.navbar {
+  height: 85px;      /* set the height you want */
+  display: flex;
+  align-items: center; /* vertically center content */
+  border-bottom: 1px;
+  border-color: black;
+  padding-right: 5px;
+}
+
+
+
+
+
+.navbar {
+  background: linear-gradient(90deg, #60f8c0, #6ac7e1);
+  color: rgb(14, 0, 0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+
+
+.navbar b {
+  font-size: 20px;
+  color: #fff;
+}
