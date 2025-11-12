@@ -35,3 +35,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #007bff, #00c6ff);
 }
+.navbar {
+    --bs-navbar-padding-x: 0 ;
+}

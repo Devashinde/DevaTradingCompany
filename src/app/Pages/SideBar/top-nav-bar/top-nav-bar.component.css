@@ -20,10 +20,13 @@
 
 
 .navbar {
-  background: linear-gradient(90deg, #60f8c0, #6ac7e1);
+  background: linear-gradient(90deg, #cbdfe5, #b6feee);
   color: rgb(14, 0, 0);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  
+ 
+}
+.navbar-padding-y{
+padding: 0px;
 }
 
 

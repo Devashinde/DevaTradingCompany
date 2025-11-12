@@ -1,10 +1,10 @@
 /* Dashboard container background */
 .dashboard {
   background-color: #f8f9fb; /* soft light gray background */
-  min-height: calc(100vh - 56px); /* full height minus topbar */
+  /* min-height: calc(100vh - 56px); 
   padding: 30px;
-  margin-left: 220px; /* same as sidebar width */
-  margin-top: 56px; /* same as topbar height */
+  margin-left: 220px; 
+  margin-top: 56px; */
   overflow-y: auto;
 }
 
@@ -49,11 +49,11 @@ canvas {
 }
 .dashboard {
   background-color: #f8f9fb;
-  min-height: calc(100vh - 56px);
+  /* min-height: calc(100vh - 56px);
   padding: 30px;
   margin-left: 220px;
   margin-top: 56px;
-  overflow-y: auto;
+  overflow-y: auto; */
 }
 
 /* Card base style */

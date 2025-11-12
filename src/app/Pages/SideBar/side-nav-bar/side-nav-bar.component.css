@@ -8,7 +8,7 @@
   overflow-y: auto;
   border-right: 1px solid #ddd;
   transition: width 0.3s;
-  background: linear-gradient(90deg, #60f8c0, #6ac7e1);
+  background: linear-gradient(90deg, #cbdfe5, #b6feee);
 }
 
 .sidebar.collapsed {
@@ -34,7 +34,7 @@
   padding: 10px 15px;
   color: #555;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .menu-link {
@@ -43,6 +43,7 @@
   padding: 10px 15px;
   color: #333;
   text-decoration: none;
+  font-size:19px;
 }
 
 .menu-link i {
