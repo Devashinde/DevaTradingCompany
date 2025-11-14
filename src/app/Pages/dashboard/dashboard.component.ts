@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChartData, ChartOptions } from 'chart.js';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,24 @@ import { ChartData, ChartOptions } from 'chart.js';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+
+
+  usersCount:any;
+ constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.loadUsers();
+    console.log(this.users);
+  }
+
+  loadUsers() {
+  this.userService.getUsers().subscribe(res => {
+    this.usersCount = res.length;
+    console.log(this.users); // ✅ now it will show the real data
+  });
+}
+
+
 
   // Line chart for monthly sales
   lineChartData: ChartData<'line'> = {
@@ -31,8 +50,9 @@ export class DashboardComponent {
   };
 
   users = [
-    { u_name: 'John Doe', u_Mobile: '9999999999', u_Address: 'Mumbai' },
-    { u_name: 'Jane Smith', u_Mobile: '8888888888', u_Address: 'Pune' }
+    { u_name: 'Devang Shinde', u_Mobile: '8975563606', u_Address: 'Nashik' },
+    { u_name: 'Ishwar Somase', u_Mobile: '9970565322', u_Address: 'Mumbai' },
+    { u_name: 'Mayur Jadhav', u_Mobile: '9755435443', u_Address: 'Pune' },
   ];
 
 }

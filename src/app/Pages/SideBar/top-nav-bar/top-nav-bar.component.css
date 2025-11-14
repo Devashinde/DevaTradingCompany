@@ -20,7 +20,7 @@
 
 
 .navbar {
-  background: linear-gradient(90deg, #cbdfe5, #b6feee);
+  background: linear-gradient(90deg, #cbdfe5, #1b134c);
   color: rgb(14, 0, 0);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
  
@@ -34,4 +34,93 @@ padding: 0px;
 .navbar b {
   font-size: 20px;
   color: #fff;
+}
+
+
+
+
+.star {
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff 40%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.7);
+}
+
+.star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  height: 2px;
+  width: 120px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: trailFade 6s linear infinite;
+}
+/* ✨ Animation for first star */
+.star1 {
+  animation: moveStar1 6s linear infinite, twinkle 2s ease-in-out infinite;
+}
+
+/* ✨ Animation for second star */
+.star2 {
+  animation: moveStar2 5s linear infinite, twinkle 3s ease-in-out infinite;
+}
+
+.star3 {
+  animation: moveStar3 8s linear infinite, twinkle 4s ease-in-out infinite;
+}
+
+/* ✨ Animation for second star */
+.star4 {
+  animation: moveStar4 7s linear infinite, twinkle 5s ease-in-out infinite;
+}
+
+/* Move star 1: right → left, slightly downward */
+@keyframes moveStar1 {
+  0% {
+    right: -20px;
+    top: 15px;
+  }
+  50% {
+    right: 50%;
+    top: 25px;
+  }
+  100% {
+    right: 100%;
+    top: 35px;
+  }
+}
+
+/* Move star 2: right → left, slightly upward (crosses the other) */
+@keyframes moveStar2 {
+  0% {
+    right: -40px;
+    top: 35px;
+  }
+  50% {
+    right: 50%;
+    top: 15px;
+  }
+  100% {
+    right: 100%;
+    top: 25px;
+  }
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes trailFade {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }

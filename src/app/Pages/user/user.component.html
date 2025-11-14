@@ -1,1 +1,26 @@
-<p>user works!</p>
+<div class="content">
+   <div class="container" style="padding-top: 3rem;">
+    <!-- Users Table -->
+    <div class="card p-3">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Address</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.u_id }}</td>
+            <td>{{ user.u_name }}</td>
+            <td>{{ user.u_Mobile }}</td>
+            <td>{{ user.u_Address }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

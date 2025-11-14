@@ -8,7 +8,12 @@
   overflow-y: auto;
   border-right: 1px solid #ddd;
   transition: width 0.3s;
-  background: linear-gradient(90deg, #cbdfe5, #b6feee);
+  background: linear-gradient(180deg, #cbdfe5,#1b134c);
+  overflow-y: auto;            /* ✅ Enables vertical scroll only for sidebar */
+  overflow-x: hidden;          /* Hide horizontal scrollbar */
+  scrollbar-width: thin;       /* Optional (for Firefox) */
+  scrollbar-color: #999 transparent; /* Optional custom scrollbar color */
+  z-index: 1000;               
 }
 
 .sidebar.collapsed {
@@ -22,6 +27,7 @@
   left: 220px; /* aligns with sidebar when expanded */
   z-index: 1001;
   transition: left 0.3s;
+  color: #fff;
 }
 
 .sidebar.collapsed ~ .toggle-btn {
@@ -30,9 +36,10 @@
 
 /* Sidebar links */
 .menu-header {
+  margin-right: 8px;
   font-weight: bold;
   padding: 10px 15px;
-  color: #555;
+  color: #fff;
   text-transform: uppercase;
   font-size: 1rem;
 }
@@ -41,7 +48,7 @@
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size:19px;
 }
@@ -54,6 +61,99 @@
   background-color: #949aa0;
   color: white;
 }
+
+/* Sidebar container must allow absolute positioning */
+.sidebar {
+  position: relative;
+}
+
+/* Sidebar container allows positioning */
+.sidebar {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Base star look */
+.dna-star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 40%, rgba(255,255,255,0) 70%);
+  box-shadow: 0 0 10px 5px rgba(255,255,255,0.7);
+  opacity: 0.9;
+  z-index: 2; /* 🟢 Star always above its trail */
+}
+
+/* Star trail — now correctly behind the star */
+/* .dna-star::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 3px;
+  height: 80px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  opacity: 1;
+  filter: blur(2px);
+  z-index: 1; /* 🟣 Behind the star 
+  animation: trailFollow 5s linear infinite;
+} */
+
+/* Star trail — glows behind the star */
+/* .dna-star::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 3px;
+  height: 80px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+  opacity: 1;
+  filter: blur(2px);
+  animation: trailFollow 5s linear infinite;
+} */
+
+/* Star A — moves bottom→top diagonally left→right */
+.star-a {
+  animation: moveStarA 5s linear infinite, twinkle 2s ease-in-out infinite;
+}
+
+/* Star B — moves bottom→top diagonally right→left */
+.star-b {
+  animation: moveStarB 5s linear infinite, twinkle 3s ease-in-out infinite;
+}
+
+/* STAR MOVEMENT — Cross (X shape / pyramidal) */
+@keyframes moveStarA {
+  0%   { bottom: -10px; left: 10%; opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { bottom: 50%; left: 10%; }
+  90%  { opacity: 1; }
+  100% { bottom: 100%; left: 50%; opacity: 0; }
+}
+
+@keyframes moveStarB {
+  0%   { bottom: -10px; left: 50%; opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { bottom: 50%; left: 30%; }
+  90%  { opacity: 1; }
+  100% { bottom: 100%; left: 50%; opacity: 0; }
+}
+
+/* Star shine effect */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Trail follows behind the star and fades slowly */
+/* @keyframes trailFollow {
+  0%, 60% { opacity: 1; height: 80px; }
+  100% { opacity: 0; height: 20px; }
+} */
 
 
 

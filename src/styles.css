@@ -38,3 +38,6 @@ body {
 .navbar {
     --bs-navbar-padding-x: 0 ;
 }
+.container{
+          margin-top: 5rem;
+}

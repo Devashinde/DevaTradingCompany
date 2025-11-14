@@ -1,10 +1,13 @@
 .content {
-  margin-left: 220px; /* width of sidebar */
+  
   padding: 80px 20px 20px 20px; /* leave space for navbar */
   width: 100%;
+  height: 100%;
+  overflow: scroll;
 }
  .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 20px;
@@ -36,3 +39,63 @@
   .marker-tab:hover::after {
     transform: scaleX(1);
   }
+
+  /* Reset body and html */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* prevent body scroll */
+}
+
+/* Fixed Top Bar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;             /* fixed height */
+  z-index: 1000;
+}
+
+/* Dashboard layout below topbar */
+.dashboard {
+  display: flex;
+  position: fixed;
+  top: 10px;                /* below topbar */
+  left: 0;
+  width: 100%;
+  height:100%; /* full height minus topbar */
+  overflow: hidden;          /* no scroll on this container */
+}
+
+/* Sidebar */
+.sidebar {             /* adjust as needed */
+  height: 100%;
+  overflow-y: auto;         /* scroll if sidebar content overflows */
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+}
+
+/* Content */
+.content {
+  flex: 1;                  /* fill remaining space */
+  height: 100%;
+  overflow-y: auto;         /* scrollable content area */
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Optional: custom scrollbars */
+.sidebar::-webkit-scrollbar{
+  width: 1px;
+}
+
+
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}

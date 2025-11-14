@@ -33,15 +33,46 @@
       <span *ngIf="!isCollapsed">User Section</span>
     </li>
     <li>
-      <a href="#" class="menu-link">
+      <a [routerLink]="['/user']" class="menu-link">
         <i class="fa fa-list"></i>
         <span *ngIf="!isCollapsed">User List</span>
       </a>
     </li>
     <li>
-      <a href="#" class="menu-link">
+      <a [routerLink]="['users']" class="menu-link">
         <i class="fa fa-user-plus"></i>
         <span *ngIf="!isCollapsed">Add User</span>
+      </a>
+    </li>
+
+        <!-- Order Section -->
+    <li class="menu-header mt-3">
+      <i class="fa fa-info-circle"></i>
+      <span *ngIf="!isCollapsed">Orders</span>
+    </li>
+    <li>
+      <a  [routerLink]="['/about-company']" class="menu-link">
+        <i class="fa fa-building"></i>
+        <span *ngIf="!isCollapsed">Order Details</span>
+      </a>
+    </li>
+
+
+            <!-- Order Section -->
+    <li class="menu-header mt-3">
+      <i class="fa fa-info-circle"></i>
+      <span *ngIf="!isCollapsed">Financial Section</span>
+    </li>
+    <li>
+      <a  [routerLink]="['/about-company']" class="menu-link">
+        <i class="fa fa-building"></i>
+        <span *ngIf="!isCollapsed">Investment Ledger</span>
+      </a>
+    </li>
+        <li>
+      <a  [routerLink]="['/about-company']" class="menu-link">
+        <i class="fa fa-building"></i>
+        <span *ngIf="!isCollapsed">Detail Report</span>
       </a>
     </li>
 
@@ -63,6 +94,10 @@
       </a>
     </li>
   </ul>
+  <div class="dna-stars">
+  <div class="dna-star star-a"></div>
+  <div class="dna-star star-b"></div>
+</div>
 </div>
 
 

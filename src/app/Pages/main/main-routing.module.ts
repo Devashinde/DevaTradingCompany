@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserInfoComponent } from '../user-info/user-info.component';
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { UserComponent } from '../user/user.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,7 @@ const routes: Routes = [
 //{ path: 'contact-us', component: ContactUsComponent },
 
   // Wildcard route
-  { path: '**', redirectTo: 'users' }
+  { path: 'user', component: UserComponent }
 ];
 
 @NgModule({
